@@ -5,12 +5,6 @@ library(see)                    # Theme für Abbildung
 library(haven)                  # Einlesen von dta-Dateien
 library(ggridges)               # für geom_density_ridges()
 
-
-# Setzen des Working Directories ------------------------------------------
-
-setwd("C:/Users/noah_/OneDrive/Desktop/Programmieren in R/LinkedIn")
-
-
 # Einlesen des Datensatzes --------------------------------------------------
 
 # GLES 2025, ZA10100
@@ -18,6 +12,7 @@ GLES2025 <- read_dta("GLES2025.dta")
 
 # Links-Rechts-Selbsteinstufung
 table(GLES2025$q37) 
+
 # Zweitstimme Bundestagswahl
 table(GLES2025$q114ba) 
 
@@ -147,7 +142,7 @@ plot_gles %>%
 
 
 
-# Visualisierung Light Background -----------------------------------------
+# Plot mit Light Background -----------------------------------------
 
 
 # Individualisierung der Linienfarben
@@ -201,4 +196,5 @@ plot_gles_light %>%
                                 vjust = -3),
     plot.margin = margin(t = 10, r = 20, b = 10, l = 20),
     axis.line.x = element_line(color = "black"))
+
 
